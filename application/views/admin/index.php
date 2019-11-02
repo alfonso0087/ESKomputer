@@ -3,7 +3,7 @@
         <div class="">
           <div class="page-title">
             <div class="title_left">
-              <h3>Plain Page</h3>
+              <h3>Halaman Dashboard</h3>
             </div>
 
           </div>
