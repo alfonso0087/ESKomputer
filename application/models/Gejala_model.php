@@ -27,13 +27,13 @@ class Gejala_model extends CI_model
 
     public function ubahGejala()
     {
+        $id = $this->input->post('id_gejala');
         // Mengubah data gejala
         $data = [
             "kode_gejala" => $this->input->post('kode', true),
             "nama_gejala" => $this->input->post('nama', true)
         ];
-
-        $this->db->where('id_gejala', $this->input->post('id_gejala'));
+        $this->db->where('id_gejala', $id);
         $this->db->update('tbl_gejala', $data);
     }
 

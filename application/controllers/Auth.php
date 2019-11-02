@@ -83,4 +83,10 @@ class Auth extends CI_Controller
     $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Anda telah Keluar!</div>'); //buat pesan akun berhasil dibuat
     redirect('auth');
   }
+
+  public function blocked()
+  {
+    $data['judul'] = "Block Access";
+    $this->load->view('auth/blocked', $data);
+  }
 }

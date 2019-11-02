@@ -21,10 +21,10 @@
 
                   <div class="row mt-3">
                     <div class="col-md-6">
-                      <a href="<?= base_url(); ?>gejala/tambah" class="btn btn-primary">Tambah Data Gejala</a>
+                      <button type="submit" class="btn btn-primary" data-toggle="modal" data-target=".tambah">Tambah Data Gejala</button>
                     </div>
                   </div>
-
+                  <?= $this->session->flashdata('pesan'); ?>
                   <table id="datatable" class="table table-striped table-bordered">
                     <thead>
                       <tr>
@@ -36,20 +36,20 @@
                     </thead>
 
                     <tbody>
-                      <tr>
-                        <?php $i = 1; ?>
-                        <?php foreach ($gejala as $gjl) : ?>
+                      <?php $i = 1; ?>
+                      <?php foreach ($gejala as $gjl) : ?>
+                        <tr>
 
                           <td><?= $i; ?></td>
                           <td><?= $gjl['kode_gejala']; ?></td>
                           <td><?= $gjl['nama_gejala']; ?></td>
                           <td>
-                            <a href="<?= base_url(); ?>/gejala/hapus <?= $gjl['id_gejala']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Data akan dihapus');">Hapus</a>
-                            <a href="<?= base_url(); ?>/gejala/ubah <?= $gjl['id_gejala']; ?>" class="btn btn-warning btn-sm">Ubah</a>
+                            <a href="<?= base_url('gejala/hapus/') . $gjl['id_gejala']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Data akan dihapus');">Hapus</a>
+                            <a href="<?= base_url('gejala/modal_ubah/') . $gjl['id_gejala']; ?>" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".ubah<?= $gjl['id_gejala']; ?>">Ubah</a>
                           </td>
-                        <?php endforeach ?>
+                        </tr>
                         <?php $i++; ?>
-                      </tr>
+                      <?php endforeach ?>
                     </tbody>
 
                   </table>
