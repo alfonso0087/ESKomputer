@@ -21,19 +21,18 @@
         </div>
         <!-- /menu profile quick info -->
 
-        <br />
+
 
         <!-- sidebar menu -->
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
           <div class="menu_section">
-            <h3>General</h3>
             <ul class="nav side-menu">
               <li><a href="<?= base_url('admin'); ?>"><i class="fa fa-fw fa-home"></i> Dashboard</a></li>
               <li><a href="<?= base_url('gejala'); ?>"><i class="fa fa-fw fa-edit"></i> Gejala</a></li>
-              <li><a href="#"><i class="fa fa-fw fa-desktop"></i>Kerusakan</a></li>
+              <li><a href="<?= base_url('kerusakan'); ?>"><i class="fa fa-fw fa-desktop"></i>Kerusakan</a></li>
               <li><a href="#"><i class="fa fa-fw fa-table"></i> Basis Pengetahuan</a></li>
               <li><a href="#"><i class="fa fa-fw fa-bar-chart-o"></i> Laporan</a></li>
-              <li><a href="<?= base_url('auth/logout'); ?>"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i> Logout </a></li>
+              <li onclick="return confirm('Yakin Keluar?');"><a href="<?= base_url('auth/logout'); ?>"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i> Logout </a></li>
             </ul>
           </div>
 
