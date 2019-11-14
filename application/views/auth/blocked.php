@@ -33,10 +33,9 @@
                         <p>Akses Anda ditolak,silahkan Login terlebih dahulu.
                         </p>
                         <div class="mid_center">
-                            <a href="<?= base_url('auth'); ?>">
+                            <a class="btn btn-info" href="<?= base_url('auth'); ?>">
                                 <h3>KEMBALI</h3>
                             </a>
-
                         </div>
                     </div>
                 </div>
