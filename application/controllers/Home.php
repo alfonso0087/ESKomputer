@@ -10,4 +10,11 @@ class Home extends CI_Controller
     $this->load->view('home/index');
     $this->load->view('templates/Home_Footer');
   }
+
+  public function user()
+  {
+    $this->load->view('templates/Home_Header');
+    $this->load->view('home/user');
+    $this->load->view('templates/Home_Footer');
+  }
 }

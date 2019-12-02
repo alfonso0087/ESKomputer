@@ -1,63 +1,21 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en" id="home">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?= $judul; ?></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" /> -->
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="<?= base_url('assets2'); ?>/img/favicon2.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Expert System Computer</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
+  <link href="<?= base_url('assets2'); ?>/css/bootstrap.css" rel="stylesheet" />
+  <link href="<?= base_url('assets2'); ?>/css/landing-page.css" rel="stylesheet" />
 
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="<?= base_url('assets2/'); ?>css/animate.css">
-  <!-- Icomoon Icon Fonts-->
-  <link rel="stylesheet" href="<?= base_url('assets2/'); ?>css/icomoon.css">
-  <!-- Bootstrap  -->
-  <link rel="stylesheet" href="<?= base_url('assets2/'); ?>css/bootstrap.css">
-
-  <!-- Magnific Popup -->
-  <link rel="stylesheet" href="<?= base_url('assets2/'); ?>css/magnific-popup.css">
-
-  <!-- Owl Carousel -->
-  <link rel="stylesheet" href="<?= base_url('assets2/'); ?>css/owl.carousel.min.css">
-  <link rel="stylesheet" href="<?= base_url('assets2/'); ?>css/owl.theme.default.min.css">
-
-  <!-- Theme style  -->
-  <link rel="stylesheet" href="<?= base_url('assets2/'); ?>css/style.css">
-
-  <!-- Modernizr JS -->
-  <script src="<?= base_url('assets2/'); ?>js/modernizr-2.6.2.min.js"></script>
-
-
+  <!--     Fonts and icons     -->
+  <link href="<?= base_url('assets2'); ?>/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+  <link href="<?= base_url('assets2'); ?>/css/pe-icon-7-stroke.css" rel="stylesheet" />
 </head>
 
-<body>
-
-  <div class="colorlib-loader"></div>
-
-  <div id="page">
-    <!-- Navigation -->
-    <nav class="colorlib-nav" role="navigation">
-      <div class="top-menu">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2">
-              <div id="colorlib-logo"><a href="<?= base_url('Home'); ?>">ESKomputer</a></div>
-            </div>
-            <div class="col-md-10 text-right menu-1">
-              <ul style="color: white;">
-                <li><a href="<?= base_url('Home'); ?>">Home</a></li>
-                <li><a href="#about" class="page-scroll">About</a></li>
-                <li><a href="<?= base_url('Auth'); ?>">Login</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- End of Navigation -->
+<body class="landing-page landing-page2">

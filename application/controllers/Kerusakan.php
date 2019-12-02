@@ -6,6 +6,7 @@ class Kerusakan extends CI_Controller
   public function __construct()
   {
     parent::__construct();
+    cekLogin();
     $this->load->model('Kerusakan_model', 'kerusakan');
     $this->load->library('form_validation');
   }

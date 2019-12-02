@@ -1,4 +1,3 @@
-// event saat link di klik
 $('.page-scroll').on('click', function (e) {
 
 	// ambil isi href
@@ -8,7 +7,7 @@ $('.page-scroll').on('click', function (e) {
 
 	// pindahkan scroll
 	$('html,body').animate({
-		scrollTop: elemenTujuan.offset().top - 50
-	}, 700, 'easeInOutExpo');
+		scrollTop: elemenTujuan.offset().top
+	}, 700, 'easeInQuad');
 
 })

@@ -25,7 +25,7 @@
                         <a href="<?= base_url('gejala'); ?>">
                           <div class="icon"><i class="fa fa-edit"></i>
                           </div>
-                          <div class="count">XXX</div>
+                          <div class="count"><?= $totalGejala; ?></div>
                           <h3>Gejala</h3>
                         </a>
                       </div>
@@ -34,7 +34,7 @@
                       <div class="tile-stats">
                         <a href="<?= base_url('kerusakan'); ?>">
                           <div class="icon"><i class="fa fa-desktop"></i></div>
-                          <div class="count">XXX</div>
+                          <div class="count"><?= $totalKerusakan; ?></div>
                           <h3>Kerusakan</h3>
                         </a>
                       </div>

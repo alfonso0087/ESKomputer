@@ -57,7 +57,9 @@
             <br />
 
             <div>
-              <h1><i class="fa fa-desktop"></i> ES Komputer</h1>
+              <a href="<?= base_url('home'); ?>">
+                <h1><i class="fa fa-desktop"></i> ES Komputer</h1>
+              </a>
               <p>©2019- Sistem Pakar Diagnosa Kerusakan Komputer Alfonso0087</p>
             </div>
           </div>

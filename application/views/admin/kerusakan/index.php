@@ -49,7 +49,7 @@
                           <td><?= $rusak['solusi']; ?></td>
                           <td>
                             <a href="<?= base_url('kerusakan/hapus/') . $rusak['id_kerusakan']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Data akan dihapus');">Hapus</a>
-                            <a href="<?= base_url('kerusakan/modal_ubah_kerusakan/') . $rusak['id_kerusakan']; ?>" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".ubahKerusakan<?= $rusak['id_kerusakan']; ?>">Ubah</a>
+                            <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".ubahKerusakan<?= $rusak['id_kerusakan']; ?>">Ubah</a>
                           </td>
                         </tr>
                         <?php $i++; ?>

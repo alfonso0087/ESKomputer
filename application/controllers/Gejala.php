@@ -6,9 +6,7 @@ class Gejala extends CI_Controller
   public function __construct()
   {
     parent::__construct();
-    if (!$this->session->userdata('nama_admin')) {
-      redirect('auth/blocked');
-    }
+    cekLogin();
     $this->load->model('Gejala_model', 'MG');
     $this->load->library('form_validation');
   }
@@ -47,7 +45,7 @@ class Gejala extends CI_Controller
       $this->load->view('admin/gejala/modal_ubah');
     } else {
       $this->MG->tambahGejala();
-      $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data Gejala Berhasil ditambahkan!</div>'); //buat pesan akun berhasil dibuat
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible" role="alert">Data Gejala Berhasil ditambahkan!</div>'); //buat pesan akun berhasil dibuat
       redirect('gejala');
     }
   }

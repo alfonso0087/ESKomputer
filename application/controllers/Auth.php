@@ -37,10 +37,20 @@ class Auth extends CI_Controller
       // cek password
       if (password_verify($pass, $user['password'])) {
         $data = [
-          'nama_admin' => $user['nama_admin']
+          'username' => $user['username'],
+          'role_id' => $user['role_id']
         ];
         $this->session->set_userdata($data);
-        redirect('admin');
+        if ($user['role_id'] == 1) {
+          redirect('Admin');
+        } else {
+          redirect('Member');
+        }
+        // $data = [
+        //   'nama_admin' => $user['nama_admin']
+        // ];
+        // $this->session->set_userdata($data);
+        // redirect('admin');
       } else {
         $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Passwordnya salah!</div>'); //buat pesan akun tidak ada
         redirect('auth');
@@ -71,14 +81,14 @@ class Auth extends CI_Controller
       $this->load->view('auth/registrasi', $data);
     } else {
       $this->Auth_model->registrasiAdmin(); //panggil fungsi registrasi yang ada di Auth_model
-      $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data Admin Berhasil ditambahkan!,Silahkan login!</div>'); //buat pesan akun berhasil dibuat
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data User Berhasil ditambahkan!,Silahkan login!</div>'); //buat pesan akun berhasil dibuat
       redirect('auth');
     }
   }
 
   public function logout()
   {
-    $this->session->unset_userdata('nama_admin');
+    $this->session->unset_userdata('username');
 
     $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Anda telah Keluar!</div>'); //buat pesan akun berhasil dibuat
     redirect('auth');
