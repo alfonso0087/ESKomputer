@@ -22,11 +22,11 @@ class Gejala extends CI_Controller
     $data['gejala'] = $this->MG->getAllGejala();
     $data['kode'] = $this->MG->KodeGejala();
 
-    $this->load->view('templates/admin_header', $data);
-    $this->load->view('templates/admin_sidebar', $data);
-    $this->load->view('templates/admin_topbar');
+    $this->load->view('templates/Admin_header', $data);
+    $this->load->view('templates/Admin_sidebar', $data);
+    $this->load->view('templates/Admin_topbar');
     $this->load->view('admin/gejala/index', $data);
-    $this->load->view('templates/admin_footer');
+    $this->load->view('templates/Admin_footer');
     $this->load->view('admin/gejala/modal_ubah');
     $this->load->view('admin/gejala/modal_tambah', $data);
   }
@@ -37,11 +37,11 @@ class Gejala extends CI_Controller
     $this->form_validation->set_rules('nama', 'Nama', 'required');
 
     if ($this->form_validation->run() == false) {
-      $this->load->view('templates/admin_header', $data);
-      $this->load->view('templates/admin_sidebar', $data);
-      $this->load->view('templates/admin_topbar');
+      $this->load->view('templates/Admin_header', $data);
+      $this->load->view('templates/Admin_sidebar', $data);
+      $this->load->view('templates/Admin_topbar');
       $this->load->view('admin/gejala/index', $data);
-      $this->load->view('templates/admin_footer');
+      $this->load->view('templates/Admin_footer');
       $this->load->view('admin/gejala/modal_tambah');
       $this->load->view('admin/gejala/modal_ubah');
     } else {

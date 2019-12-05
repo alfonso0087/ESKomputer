@@ -20,11 +20,11 @@ class Kerusakan extends CI_Controller
     $data['tbl_kerusakan'] = $this->kerusakan->getAllKerusakan();
     $data['kode'] = $this->kerusakan->KodeKerusakan();
 
-    $this->load->view('templates/admin_header', $data);
-    $this->load->view('templates/admin_sidebar', $data);
-    $this->load->view('templates/admin_topbar');
+    $this->load->view('templates/Admin_header', $data);
+    $this->load->view('templates/Admin_sidebar', $data);
+    $this->load->view('templates/Admin_topbar');
     $this->load->view('admin/kerusakan/index', $data);
-    $this->load->view('templates/admin_footer');
+    $this->load->view('templates/Admin_footer');
     $this->load->view('admin/kerusakan/modal_tambah_kerusakan', $data);
     $this->load->view('admin/kerusakan/modal_ubah_kerusakan');
   }
