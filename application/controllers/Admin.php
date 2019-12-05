@@ -36,7 +36,7 @@ class Admin extends CI_Controller
   {
     $data['judul'] = "Halaman Profile Admin";
     $data['user'] = $this->db->get_where('tbl_admin', [
-      'nama_admin' => $this->session->userdata('nama_admin')
+      'username' => $this->session->userdata('username')
     ])->row_array();
     $data['profile'] = $this->Adm->getAllProfile();
 

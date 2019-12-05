@@ -17,17 +17,18 @@ class Gejala extends CI_Controller
     $data['tabel'] = 'Data Gejala';
 
     $data['user'] = $this->db->get_where('tbl_admin', [
-      'nama_admin' => $this->session->userdata('nama_admin')
+      'username' => $this->session->userdata('username')
     ])->row_array();
     $data['gejala'] = $this->MG->getAllGejala();
+    $data['kode'] = $this->MG->KodeGejala();
 
     $this->load->view('templates/admin_header', $data);
     $this->load->view('templates/admin_sidebar', $data);
     $this->load->view('templates/admin_topbar');
     $this->load->view('admin/gejala/index', $data);
     $this->load->view('templates/admin_footer');
-    $this->load->view('admin/gejala/modal_tambah');
     $this->load->view('admin/gejala/modal_ubah');
+    $this->load->view('admin/gejala/modal_tambah', $data);
   }
 
   public function tambah()
@@ -45,7 +46,7 @@ class Gejala extends CI_Controller
       $this->load->view('admin/gejala/modal_ubah');
     } else {
       $this->MG->tambahGejala();
-      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible" role="alert">Data Gejala Berhasil ditambahkan!</div>'); //buat pesan akun berhasil dibuat
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade in" role="alert">Data Gejala Berhasil ditambahkan!</div>'); //buat pesan akun berhasil dibuat
       redirect('gejala');
     }
   }
@@ -53,7 +54,7 @@ class Gejala extends CI_Controller
   public function ubah()
   {
     $this->MG->ubahGejala();
-    $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data Gejala Berhasil diubah!</div>'); //buat pesan akun berhasil dibuat
+    $this->session->set_flashdata('pesan', '<div class="alert alert-info" role="alert">Data Gejala Berhasil diubah!</div>'); //buat pesan akun berhasil dibuat
     redirect('gejala');
   }
 

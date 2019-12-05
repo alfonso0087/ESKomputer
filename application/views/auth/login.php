@@ -49,7 +49,7 @@
 
           <div class="separator">
             <a href="<?= base_url('auth/registrasi'); ?>">
-              Buat Akun Admin
+              Buat Akun
             </a>
             </p>
 

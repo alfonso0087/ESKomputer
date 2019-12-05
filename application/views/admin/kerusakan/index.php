@@ -26,7 +26,7 @@
                   </div>
 
                   <?= $this->session->flashdata('pesan'); ?>
-                  <table id="datatable" class="table table-striped table-bordered">
+                  <table id="datatable-buttons" class="table table-striped table-bordered">
                     <thead>
                       <tr>
                         <th>No</th>
@@ -34,7 +34,7 @@
                         <th>Nama Kerusakan</th>
                         <th>Gambar</th>
                         <th>Solusi</th>
-                        <th>Aksi</th>
+                        <th>Kelola</th>
                       </tr>
                     </thead>
 
@@ -48,8 +48,8 @@
                           <td><img src="<?= base_url('assets/images/kerusakan/') . $rusak['gambar']; ?>" width="150"></td>
                           <td><?= $rusak['solusi']; ?></td>
                           <td>
-                            <a href="<?= base_url('kerusakan/hapus/') . $rusak['id_kerusakan']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Data akan dihapus');">Hapus</a>
-                            <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".ubahKerusakan<?= $rusak['id_kerusakan']; ?>">Ubah</a>
+                            <a href="<?= base_url('kerusakan/hapus/') . $rusak['kode_kerusakan']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Data akan dihapus');">Hapus</a>
+                            <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".ubahKerusakan<?= $rusak['kode_kerusakan']; ?>">Ubah</a>
                           </td>
                         </tr>
                         <?php $i++; ?>

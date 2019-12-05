@@ -15,16 +15,17 @@ class Kerusakan extends CI_Controller
   {
     $data['judul'] = "Halaman Kerusakan";
     $data['user'] = $this->db->get_where('tbl_admin', [
-      'nama_admin' => $this->session->userdata('nama_admin')
+      'username' => $this->session->userdata('username')
     ])->row_array();
     $data['tbl_kerusakan'] = $this->kerusakan->getAllKerusakan();
+    $data['kode'] = $this->kerusakan->KodeKerusakan();
 
     $this->load->view('templates/admin_header', $data);
     $this->load->view('templates/admin_sidebar', $data);
     $this->load->view('templates/admin_topbar');
     $this->load->view('admin/kerusakan/index', $data);
     $this->load->view('templates/admin_footer');
-    $this->load->view('admin/kerusakan/modal_tambah_kerusakan');
+    $this->load->view('admin/kerusakan/modal_tambah_kerusakan', $data);
     $this->load->view('admin/kerusakan/modal_ubah_kerusakan');
   }
 
@@ -62,7 +63,7 @@ class Kerusakan extends CI_Controller
 
   public function ubahkerusakan()
   {
-    $data['tbl_kerusakan'] = $this->db->get('tbl_kerusakan')->result_array();
+    //$data['tbl_kerusakan'] = $this->db->get('tbl_kerusakan')->result_array();
     $data['user'] = $this->db->get_where('tbl_admin', [
       'nama_admin' => $this->session->userdata('nama_admin')
     ])->row_array();

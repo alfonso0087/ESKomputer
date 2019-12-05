@@ -13,7 +13,7 @@
 
         <div class="form-group">
           <label for="nama">Kode Kerusakan</label>
-          <input type="text" class="form-control" id="kode" name="kode" placeholder="Kode kerusakan">
+          <input type="text" class="form-control" id="kode" name="kode" placeholder="Kode kerusakan" value="<?= $kode; ?>" readonly>
         </div>
 
         <div class="form-group">
