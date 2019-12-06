@@ -19,11 +19,6 @@
               <textarea id="nama" class="form-control" name="nama"><?= $gjl['nama_gejala']; ?></textarea>
               <!-- <input type="text" class="form-control" id="nama" name="nama" value="<?= $gjl['nama_gejala']; ?>"> -->
             </div>
-            <div class="form-group">
-              <label for="cf_value">Tingkat Kepastian</label>
-              <input type="text" class="form-control" id="cf_value" name="cf_value" value="<?= $gjl['tingkat_kepercayaan']; ?>">
-            </div>
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>

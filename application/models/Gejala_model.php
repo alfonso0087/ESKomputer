@@ -8,12 +8,6 @@ class Gejala_model extends CI_model
     return $this->db->get('tbl_gejala')->result_array();
   }
 
-  public function getGejalaById($id)
-  {
-    // menampilkan gejala berdasarkan id yang dipilih.
-    return $this->db->get_where('tbl_gejala', ['id_gejala' => $id])->row_array();
-  }
-
   public function KodeGejala()
   {
     // Membuat kode gejala menjadi generate AI (Auto Increment)
@@ -27,23 +21,13 @@ class Gejala_model extends CI_model
     return $kode;
   }
 
-
   public function tambahGejala()
   {
     $data = [
       'kode_gejala' => $this->KodeGejala(),
-      "nama_gejala" => $this->input->post('nama', true),
-      "tingkat_kepercayaan" => $this->input->post('cf_value', true)
+      "nama_gejala" => $this->input->post('nama', true)
     ];
     $this->db->insert('tbl_gejala', $data);
-
-    // Tambah data gejala
-    // $data = [
-    //   "kode_gejala" => $this->input->post('kode', true),
-    //   "nama_gejala" => $this->input->post('nama', true)
-    // ];
-
-    // $this->db->insert('tbl_gejala', $data);
   }
 
   public function ubahGejala()
@@ -51,8 +35,7 @@ class Gejala_model extends CI_model
     $id = $this->input->post('kode_gejala');
     // Mengubah data gejala
     $data = [
-      "nama_gejala" => $this->input->post('nama', true),
-      "tingkat_kepercayaan" => $this->input->post('cf_value', true)
+      "nama_gejala" => $this->input->post('nama', true)
     ];
     $this->db->where('kode_gejala', $id);
     $this->db->update('tbl_gejala', $data);

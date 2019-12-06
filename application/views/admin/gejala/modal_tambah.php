@@ -18,10 +18,6 @@
                             <label for="nama">Nama Gejala</label>
                             <input type="text" class="form-control" id="nama" name="nama">
                         </div>
-                        <div class="form-group">
-                            <label for="cf_value">Tingkat Kepercayaan</label>
-                            <input type="text" class="form-control" id="cf_value" name="cf_value">
-                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
