@@ -9,6 +9,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?= base_url('gejala/tambah'); ?>" method="post">
+                    <input type="hidden" name="id" id="id">
                     <div class="form-group">
                         <label for="kode">Kode Gejala</label>
                         <input type="text" class="form-control" id="kode" name="kode" value="<?= $kode; ?>" readonly>

@@ -1,5 +1,5 @@
 <?php foreach ($gejala as $gjl) : ?>
-  <div class="modal fade ubahGejala<?= $gjl['kode_gejala']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade ubahGejala<?= $gjl['id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -9,7 +9,7 @@
         </div>
         <div class="modal-body">
           <form action="<?= base_url('gejala/ubah'); ?>" method="post">
-            <input type="hidden" name="kode_gejala" value="<?= $gjl['kode_gejala']; ?>">
+            <input type="hidden" name="id" value="<?= $gjl['id']; ?>">
             <div class="form-group">
               <label for="kode">Kode Gejala</label>
               <input type="text" class="form-control" id="kode" name="kode" value="<?= $gjl['kode_gejala']; ?>" readonly>
@@ -17,7 +17,6 @@
             <div class="form-group">
               <label for="nama">Nama Gejala</label>
               <textarea id="nama" class="form-control" name="nama"><?= $gjl['nama_gejala']; ?></textarea>
-              <!-- <input type="text" class="form-control" id="nama" name="nama" value="<?= $gjl['nama_gejala']; ?>"> -->
             </div>
         </div>
         <div class="modal-footer">

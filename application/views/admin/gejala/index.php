@@ -42,8 +42,8 @@
                           <td style="text-align: center"><?= $gjl['kode_gejala']; ?></td>
                           <td><?= $gjl['nama_gejala']; ?></td>
                           <td style="text-align: center;">
-                            <a href="<?= base_url('gejala/hapus/') . $gjl['kode_gejala']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Data akan dihapus');">Hapus</a>
-                            <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".ubahGejala<?= $gjl['kode_gejala']; ?>">Ubah</a>
+                            <a href="<?= base_url('gejala/hapus/') . $gjl['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Data akan dihapus');">Hapus</a>
+                            <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".ubahGejala<?= $gjl['id']; ?>">Ubah</a>
                           </td>
                         </tr>
                         <?php $i++; ?>
