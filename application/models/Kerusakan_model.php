@@ -33,6 +33,7 @@ class Kerusakan_model extends CI_model
       // Data yang ada di modal
       'kode_kerusakan' => $this->KodeKerusakan(),
       'nama_kerusakan' => $this->input->post('nama', true),
+      'probabilitas' => $this->input->post('probabilitas', true),
       'solusi' => $this->input->post('solusi', true)
     ];
     $this->db->insert('tbl_kerusakan', $data);
@@ -50,6 +51,7 @@ class Kerusakan_model extends CI_model
     $data = [
       "kode_kerusakan" => $this->input->post('kode', true),
       "nama_kerusakan" => $this->input->post('nama', true),
+      "probabilitas" => $this->input->post('probabilitas', true),
       "solusi" => $this->input->post('solusi', true)
     ];
     $this->db->where('kode_kerusakan', $id);

@@ -23,6 +23,10 @@
             <input type="text" class="form-control" id="nama" name="nama" value="<?= $rusak['nama_kerusakan']; ?>">
           </div>
           <div class="form-group">
+            <label for="probabilitas">Nilai Probabilitas</label>
+            <input type="text" class="form-control" id="probabilitas" name="probabilitas" value="<?= $rusak['probabilitas']; ?>">
+          </div>
+          <div class="form-group">
             <label for="gambar">Gambar Hardware</label>
             <img style="margin-bottom: 10px; width: 100px;" src=" <?= base_url('assets/images/kerusakan/') . $rusak['gambar']; ?>">
             <input type="file" class="form-control" id="gambar" name="gambar" value="<?= $rusak['gambar']; ?>"><?= $rusak['gambar']; ?>"

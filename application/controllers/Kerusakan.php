@@ -33,7 +33,7 @@ class Kerusakan extends CI_Controller
   {
     $data['tbl_kerusakan'] = $this->db->get('tbl_kerusakan')->result_array();
     $data['user'] = $this->db->get_where('tbl_admin', [
-      'nama_admin' => $this->session->userdata('nama_admin')
+      'username' => $this->session->userdata('username')
     ])->row_array();
 
     // cek jika ada gambar yang akan diupload
@@ -65,7 +65,7 @@ class Kerusakan extends CI_Controller
   {
     //$data['tbl_kerusakan'] = $this->db->get('tbl_kerusakan')->result_array();
     $data['user'] = $this->db->get_where('tbl_admin', [
-      'nama_admin' => $this->session->userdata('nama_admin')
+      'username' => $this->session->userdata('username')
     ])->row_array();
 
     // cek jika ada gambar yang akan diupload

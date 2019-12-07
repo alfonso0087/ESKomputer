@@ -22,6 +22,11 @@
         </div>
 
         <div class="form-group">
+          <label for="probabilitas">Nilai Probabilitas</label>
+          <input type="text" class="form-control" id="probabilitas" name="probabilitas" placeholder="Nilai Probabilitas">
+        </div>
+
+        <div class="form-group">
           <label for="gambar">Masukkan Gambar Hardware</label>
           <input type="file" class="form-control" id="gambar" name="gambar" placeholder="Gambar Hardware">
         </div>

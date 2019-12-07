@@ -32,6 +32,7 @@
                         <th>No</th>
                         <th>Kode Kerusakan</th>
                         <th>Nama Kerusakan</th>
+                        <th>Probabilitas</th>
                         <th>Gambar</th>
                         <th>Solusi</th>
                         <th>Kelola</th>
@@ -45,6 +46,7 @@
                           <td><?= $i; ?></td>
                           <td><?= $rusak['kode_kerusakan']; ?></td>
                           <td><?= $rusak['nama_kerusakan']; ?></td>
+                          <td><?= $rusak['probabilitas']; ?></td>
                           <td><img src="<?= base_url('assets/images/kerusakan/') . $rusak['gambar']; ?>" width="150"></td>
                           <td><?= $rusak['solusi']; ?></td>
                           <td>
