@@ -30,7 +30,7 @@
               <li><a href="<?= base_url('admin'); ?>"><i class="fa fa-fw fa-home"></i> Dashboard</a></li>
               <li><a href="<?= base_url('gejala'); ?>"><i class="fa fa-fw fa-edit"></i> Gejala</a></li>
               <li><a href="<?= base_url('kerusakan'); ?>"><i class="fa fa-fw fa-desktop"></i>Kerusakan</a></li>
-              <li><a href="#"><i class="fa fa-fw fa-table"></i> Basis Pengetahuan</a></li>
+              <li><a href="<?= base_url('pengetahuan'); ?>"><i class="fa fa-fw fa-table"></i> Basis Pengetahuan</a></li>
               <li><a href="#"><i class="fa fa-fw fa-bar-chart-o"></i> Laporan</a></li>
               <li onclick="return confirm('Yakin Keluar?');"><a href="<?= base_url('auth/logout'); ?>"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i> Logout </a></li>
             </ul>
