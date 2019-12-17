@@ -62,14 +62,7 @@
 						<div class="description text-center">
 							<h2>Expert System Komputer</h2>
 							<br>
-							<h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, aut incidunt omnis a accusamus
-								corrupti nemo libero eligendi repellendus nulla nostrum! Earum optio tenetur libero natus explicabo
-								sapiente, ipsa nam!</h5>
-							<div class="buttons">
-								<a href="#" class="btn btn-fill btn-neutral">
-									<i class="fa fa-play"></i> Mulai Diagnosa
-								</a>
-							</div>
+							<h5>Aplikasi Untuk Diagnosa Kerusakan Laptop/Komputer </h5>
 						</div>
 					</div>
 				</div>
@@ -83,7 +76,8 @@
 				</div>
 				<div class="info">
 					<h1>About Us</h1>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus vel similique harum cum aperiam repellendus odio quia ducimus enim est eius nam temporibus ratione perferendis, quae mollitia officiis modi autem.</p>
+					<p>Sistem Pakar ini dibangun untuk membantu para pengguna atau teknisi computer/laptop dalam mendiagnosa kerusakan hardwarenya.Sistem ini memiliki 5 jenis kerusakan,berdasarkan 13 gejala yang sering dialami.
+					</p>
 				</div>
 			</div>
 		</section>
