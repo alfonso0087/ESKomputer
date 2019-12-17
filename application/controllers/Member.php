@@ -36,7 +36,7 @@ class Member extends CI_Controller
 
   public function hasil_diagnosa()
   {
-    $data['judul'] = "Hasil Diagnosa";
+    $data['judul'] = "Halaman Hasil Diagnosa";
     $data['user'] = $this->db->get_where('tbl_admin', [
       'username' => $this->session->userdata('username')
     ])->row_array();
@@ -46,8 +46,8 @@ class Member extends CI_Controller
     $data['tertinggi'] = $this->DM->tertinggi();
     $data['kerusakan'] = $this->db->get('tbl_kerusakan')->result_array();
 
-    $this->load->view('templates/Member_Header', $data);
+    $this->load->view('templates/Hasil_Header', $data);
     $this->load->view('member/hasil_diagnosa', $data);
-    $this->load->view('templates/Member_Footer');
+    $this->load->view('templates/Hasil_Footer');
   }
 }
