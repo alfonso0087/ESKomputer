@@ -3,7 +3,6 @@
     <h4 class="header-text text-center">Pilih Gejala</h4>
     <div class="row">
       <form action="<?= base_url('diagnosa/hasil'); ?>" method="POST">
-
         <div class="boxes">
           <table>
             <?php foreach ($gejala as $g) : ?>

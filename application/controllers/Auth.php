@@ -10,6 +10,7 @@ class Auth extends CI_Controller
     $this->load->model('Auth_model');
   }
 
+  // Halaman Auth
   public function index()
   {
     $this->form_validation->set_rules('username', 'Username', 'trim|required');
@@ -24,13 +25,14 @@ class Auth extends CI_Controller
   }
 
 
+  // Validasi Login
   private function _login()
   {
 
     $username = $this->input->post('username');
     $pass = $this->input->post('password');
 
-    $user = $this->db->get_where('tbl_admin', ['username' => $username])->row_array();
+    $user = $this->db->get_where('tbl_user', ['username' => $username])->row_array();
 
     // usernya ada
     if ($user) {
@@ -62,7 +64,7 @@ class Auth extends CI_Controller
     }
   }
 
-
+  // Registrasi
   public function registrasi()
   {
     // Aturan Form_validation
@@ -86,6 +88,7 @@ class Auth extends CI_Controller
     }
   }
 
+  // Logout
   public function logout()
   {
     $this->session->unset_userdata('username');
@@ -94,6 +97,7 @@ class Auth extends CI_Controller
     redirect('auth');
   }
 
+  // Halaman Akses Ditolak/block
   public function blocked()
   {
     $data['judul'] = "Block Access";

@@ -26,7 +26,7 @@
                  </div>
                </div>
                <h3>
-                 <center><?= $user['nama_admin']; ?></center>
+                 <center><?= $user['nama_user']; ?></center>
                </h3>
 
                <ul class="list-unstyled user_data">
@@ -40,7 +40,7 @@
                  </li>
                </ul>
 
-               <center><a href="" data-toggle="modal" data-target="#ubahProfile<?= $user['id_admin']; ?>" class="btn btn-info"><i class="fa fa-edit m-right-xs"></i>Ubah Profile</a></center>
+               <center><a href="" data-toggle="modal" data-target="#ubahProfile<?= $user['id_user']; ?>" class="btn btn-info"><i class="fa fa-edit m-right-xs"></i>Ubah Profile</a></center>
                <br />
              </div>
            </div>

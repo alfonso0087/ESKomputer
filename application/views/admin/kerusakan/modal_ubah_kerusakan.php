@@ -1,6 +1,6 @@
 <!-- Modal Edit -->
 <?php foreach ($tbl_kerusakan as $rusak) : ?>
-  <div class="modal fade ubahKerusakan<?= $rusak['kode_kerusakan']; ?>" tabindex="-1" role="dialog" aria-labelledby="forModalLabel" aria-hidden="true">
+  <div class="modal fade ubahKerusakan<?= $rusak['id_kerusakan']; ?>" tabindex="-1" role="dialog" aria-labelledby="forModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -11,8 +11,7 @@
         </div>
 
         <?= form_open_multipart('kerusakan/ubahKerusakan'); ?>
-        <input type="hidden" name="kode_kerusakan" value="<?= $rusak['kode_kerusakan']; ?>">
-        <input type="hidden" name="id" value="<?= $rusak['kode_kerusakan']; ?>">
+        <input type="hidden" name="id" value="<?= $rusak['id_kerusakan']; ?>">
         <div class="modal-body">
           <div class="form-group">
             <label for="kode">Kode Kerusakan</label>

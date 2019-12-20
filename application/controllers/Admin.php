@@ -17,13 +17,14 @@ class Admin extends CI_Controller
   public function index()
   {
     $data['judul'] = "Halaman Admin";
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
 
-    // Hitung jumlah data pada tabel Gejala/Kerusakan
+    // Hitung jumlah data pada tabel Gejala/Kerusakan/Pengetahuan
     $data['totalGejala'] = $this->Adm->CountGejala();
     $data['totalKerusakan'] = $this->Adm->CountKerusakan();
+    $data['totalPengetahuan'] = $this->Adm->CountPengetahuan();
 
     $this->load->view('templates/Admin_header', $data);
     $this->load->view('templates/Admin_sidebar', $data);
@@ -35,7 +36,7 @@ class Admin extends CI_Controller
   public function profile()
   {
     $data['judul'] = "Halaman Profile Admin";
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
     $data['profile'] = $this->Adm->getAllProfile();
@@ -50,7 +51,7 @@ class Admin extends CI_Controller
 
   public function ubahAdmin()
   {
-    $data['tbl_admin'] = $this->db->get('tbl_admin')->result_array();
+    $data['tbl_admin'] = $this->db->get('tbl_user')->result_array();
     // $data['user'] = $this->db->get_where('tbl_admin', [
     //   'nama_admin' => $this->session->userdata('nama_admin')
     // ])->row_array();

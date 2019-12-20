@@ -1,6 +1,6 @@
 <!-- Modal Edit -->
 
-<div class="modal fade" id="ubahProfile<?= $user['id_admin']; ?>" tabindex="-1" role="dialog" aria-labelledby="forModalLabel" aria-hidden="true">
+<div class="modal fade" id="ubahProfile<?= $user['id_user']; ?>" tabindex="-1" role="dialog" aria-labelledby="forModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -16,7 +16,7 @@
       </div>
       <div class="form-group">
         <label for="nama">Nama Admin</label>
-        <input type="text" class="form-control" id="nama" name="nama" value="<?= $user['nama_admin']; ?>">
+        <input type="text" class="form-control" id="nama" name="nama" value="<?= $user['nama_user']; ?>">
       </div>
       <div class="form-group">
         <label for="username">Username</label>

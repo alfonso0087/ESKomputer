@@ -10,25 +10,17 @@ class Pengetahuan extends CI_Controller
     $this->load->model('Pengetahuan_model', 'MP');
   }
 
+  // Halaman Pengetahuan/Aturan
   public function index()
   {
     $data['judul'] = "Halaman Pengetahuan";
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
 
     $data['gejala'] = $this->MP->getAllGejala();
     $data['kerusakan'] = $this->MP->getAllKerusakan();
     $data['pengetahuan'] = $this->MP->getAllPengetahuan();
-    $data['rule1'] = $this->MP->K01();
-    $data['rule2'] = $this->MP->K02();
-    $data['rule3'] = $this->MP->K03();
-    $data['rule4'] = $this->MP->K04();
-    $data['rule5'] = $this->MP->K05();
-    $data['rule6'] = $this->MP->K06();
-    $data['rule7'] = $this->MP->K07();
-    $data['rule8'] = $this->MP->K08();
-    $data['rule9'] = $this->MP->K09();
 
     $this->load->view('templates/Admin_header', $data);
     $this->load->view('templates/Admin_sidebar', $data);
@@ -39,10 +31,11 @@ class Pengetahuan extends CI_Controller
     $this->load->view('admin/pengetahuan/modal_ubah_pengetahuan', $data);
   }
 
+  // Tambah Pengetahuan/Aturan
   public function tambah()
   {
     $data['judul'] = 'Halaman Pengetahuan';
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
 
@@ -51,6 +44,7 @@ class Pengetahuan extends CI_Controller
     redirect('pengetahuan');
   }
 
+  // Ubah Pengetahuan/Aturan
   public function ubah()
   {
     $this->MP->ubahPengetahuan();
@@ -59,6 +53,7 @@ class Pengetahuan extends CI_Controller
     redirect('pengetahuan');
   }
 
+  // Hapus Pengetahuan/Aturan
   public function hapus($id)
   {
     $this->MP->hapus($id);

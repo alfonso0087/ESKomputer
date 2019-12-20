@@ -2,18 +2,6 @@
 
 class Kerusakan_model extends CI_model
 {
-  public function getAllKerusakan()
-  {
-    // menampilkan seluruh data kerusakan yang ada di tabel kerusakan.
-    return $this->db->get('tbl_kerusakan')->result_array();
-  }
-
-  public function getKerusakanById($id)
-  {
-    // menampilkan kerusakan berdasarkan id yang dipilih.
-    return $this->db->get_where('tbl_kerusakan', ['id_kerusakan' => $id])->row_array();
-  }
-
   public function KodeKerusakan()
   {
     // Membuat kode gejala menjadi generate AI (Auto Increment)
@@ -27,6 +15,14 @@ class Kerusakan_model extends CI_model
     return $kode;
   }
 
+  // CRUD KERUSAKAN
+  // menampilkan seluruh data kerusakan yang ada di tabel kerusakan.
+  public function getAllKerusakan()
+  {
+    return $this->db->get('tbl_kerusakan')->result_array();
+  }
+
+  // Tambah data Kerusakan
   public function tambahKerusakan()
   {
     $data = [
@@ -39,14 +35,10 @@ class Kerusakan_model extends CI_model
     $this->db->insert('tbl_kerusakan', $data);
   }
 
-  public function hapusKerusakan($id)
-  {
-    $this->db->delete('tbl_kerusakan', ['kode_kerusakan' => $id]);
-  }
-
+  // Ubah Data Kerusakan
   public function ubahkerusakan()
   {
-    $id = $this->input->post('kode_kerusakan');
+    $id = $this->input->post('id');
     // Mengubah data gejala
     $data = [
       "kode_kerusakan" => $this->input->post('kode', true),
@@ -54,7 +46,14 @@ class Kerusakan_model extends CI_model
       "probabilitas" => $this->input->post('probabilitas', true),
       "solusi" => $this->input->post('solusi', true)
     ];
-    $this->db->where('kode_kerusakan', $id);
+    $this->db->where('id_kerusakan', $id);
     $this->db->update('tbl_kerusakan', $data);
   }
+
+  // Hapus Data Kerusakan
+  public function hapusKerusakan($id)
+  {
+    $this->db->delete('tbl_kerusakan', ['id_kerusakan' => $id]);
+  }
+  // END CRUD KERUSAKAN
 }

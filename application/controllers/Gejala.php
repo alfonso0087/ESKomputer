@@ -11,12 +11,13 @@ class Gejala extends CI_Controller
     $this->load->library('form_validation');
   }
 
+  // Halaman Gejala
   public function index()
   {
     $data['judul'] = 'Halaman Gejala';
     $data['tabel'] = 'Data Gejala';
 
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
     $data['gejala'] = $this->MG->getAllGejala();
@@ -31,6 +32,7 @@ class Gejala extends CI_Controller
     $this->load->view('admin/gejala/modal_tambah', $data);
   }
 
+  // Tambah Gejala
   public function tambah()
   {
     $data['judul'] = 'Halaman Gejala';
@@ -51,6 +53,7 @@ class Gejala extends CI_Controller
     }
   }
 
+  // Ubah Gejala
   public function ubah()
   {
     $this->MG->ubahGejala();
@@ -58,6 +61,7 @@ class Gejala extends CI_Controller
     redirect('gejala');
   }
 
+  //Hapus Gejala
   public function hapus($id)
   {
     $this->MG->hapusGejala($id);

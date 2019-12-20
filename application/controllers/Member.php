@@ -12,7 +12,7 @@ class Member extends CI_Controller
   public function index()
   {
     $data['judul'] = "Halaman Member";
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
 
@@ -24,7 +24,7 @@ class Member extends CI_Controller
   public function diagnosa()
   {
     $data['judul'] = "Daftar Gejala";
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
     $data['gejala'] = $this->MM->Gejala();
@@ -37,13 +37,18 @@ class Member extends CI_Controller
   public function hasil_diagnosa()
   {
     $data['judul'] = "Halaman Hasil Diagnosa";
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
 
     // Hasil Diagnosa Akhir
+    // Hasil 3 Kerusakan dengan prob tertinggi
     $data['diagnosa'] =  $this->DM->diagnosa();
+    // Hasil Kerusakan dengan prob paling tinggi
     $data['tertinggi'] = $this->DM->tertinggi();
+    // Detail Hasil Diagnosa
+    $data['detail'] = $this->DM->detailDiagnosa();
+
     $data['kerusakan'] = $this->db->get('tbl_kerusakan')->result_array();
 
     $this->load->view('templates/Hasil_Header', $data);

@@ -56,7 +56,7 @@
           <li>
             <a class="page-scroll" href="#">
               <i class="fa fa-user"></i>
-              <?= $user['nama_admin']; ?>
+              <?= $user['nama_user']; ?>
             </a>
           </li>
           <li>

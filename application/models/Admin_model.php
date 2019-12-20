@@ -2,14 +2,15 @@
 
 class Admin_model extends CI_model
 {
+  // menampilkan seluruh data admin yang ada di tabel admin.
   public function getAllProfile()
   {
-    // menampilkan seluruh data admin yang ada di tabel admin.
-    return $this->db->get('tbl_admin')->result_array();
+    return $this->db->get('tbl_user')->result_array();
   }
+
+  // Menghitung jumlah data dalam tabel gejala
   public function CountGejala()
   {
-    // Menghitung jumlah data dalam tabel gejala
     $query = $this->db->get('tbl_gejala');
     if ($query->num_rows() > 0) {
       return $query->num_rows();
@@ -17,9 +18,10 @@ class Admin_model extends CI_model
       return 0;
     }
   }
+
+  // Menghitung jumlah data dalam tabel kerusakan
   public function CountKerusakan()
   {
-    // Menghitung jumlah data dalam tabel kerusakan
     $query = $this->db->get('tbl_kerusakan');
     if ($query->num_rows() > 0) {
       return $query->num_rows();
@@ -28,15 +30,26 @@ class Admin_model extends CI_model
     }
   }
 
+  // Menghitung jumlah data dalam tabel pengetahuan
+  public function CountPengetahuan()
+  {
+    $query = $this->db->get('tbl_pengetahuan');
+    if ($query->num_rows() > 0) {
+      return $query->num_rows();
+    } else {
+      return 0;
+    }
+  }
+
+  // Mengubah data admin
   public function ubahAdmin()
   {
-    $id = $this->input->post('id_admin');
-    // Mengubah data admin
+    $id = $this->input->post('id_user');
     $data = [
-      "nama_admin" => $this->input->post('nama', true),
+      "nama_user" => $this->input->post('nama', true),
       "username" => $this->input->post('username', true)
     ];
-    $this->db->where('id_admin', $id);
-    $this->db->update('tbl_admin', $data);
+    $this->db->where('id_user', $id);
+    $this->db->update('tbl_user', $data);
   }
 }

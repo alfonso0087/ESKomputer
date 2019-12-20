@@ -11,10 +11,11 @@ class Kerusakan extends CI_Controller
     $this->load->library('form_validation');
   }
 
+  // Halaman Kerusakan
   public function index()
   {
     $data['judul'] = "Halaman Kerusakan";
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
     $data['tbl_kerusakan'] = $this->kerusakan->getAllKerusakan();
@@ -29,10 +30,11 @@ class Kerusakan extends CI_Controller
     $this->load->view('admin/kerusakan/modal_ubah_kerusakan');
   }
 
+  // Tambah Kerusakan
   public function tambah()
   {
     $data['tbl_kerusakan'] = $this->db->get('tbl_kerusakan')->result_array();
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
 
@@ -61,10 +63,10 @@ class Kerusakan extends CI_Controller
     }
   }
 
+  // Ubah Kerusakan
   public function ubahkerusakan()
   {
-    //$data['tbl_kerusakan'] = $this->db->get('tbl_kerusakan')->result_array();
-    $data['user'] = $this->db->get_where('tbl_admin', [
+    $data['user'] = $this->db->get_where('tbl_user', [
       'username' => $this->session->userdata('username')
     ])->row_array();
 
@@ -95,6 +97,8 @@ class Kerusakan extends CI_Controller
       }
     }
   }
+
+  // Hapus Kerusakan
   public function hapus($id)
   {
     $this->kerusakan->hapusKerusakan($id);

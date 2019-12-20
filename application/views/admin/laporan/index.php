@@ -3,7 +3,7 @@
         <div class="">
           <div class="page-title">
             <div class="title_left">
-              <h3>Halaman Gejala</h3>
+              <h3>Halaman Laporan</h3>
             </div>
 
           </div>
@@ -19,32 +19,29 @@
                 </div>
                 <div class="x_content">
                   <div class="row mt-3">
-                    <div class="col-md-6">
-                      <a href="" class="btn btn-round btn-primary mb-3" data-toggle="modal" data-target=".tambah">Tambah Data Gejala</a>
-                    </div>
+
                   </div>
-                  <?= $this->session->flashdata('pesan'); ?>
+
                   <table id="datatable-buttons" class="table table-striped table-bordered">
                     <thead>
                       <tr>
                         <th style="width: 3px; text-align: center;">No</th>
-                        <th style="width: 40px; text-align: center;">Kode Gejala</th>
-                        <th style="text-align: center;">Nama Gejala</th>
-                        <th style="width: 100px; text-align: center;">Kelola</th>
+                        <th style="text-align: center;">Tanggal</th>
+                        <th style="text-align: center;">Nama</th>
+                        <th style="text-align: center;">Kerusakan</th>
+                        <th style="text-align: center;">Probabilitas</th>
                       </tr>
                     </thead>
-
                     <tbody>
                       <?php $i = 1; ?>
-                      <?php foreach ($gejala as $gjl) : ?>
+                      <?php foreach ($laporan as $l) : ?>
                         <tr>
                           <td style="text-align: center"><?= $i; ?></td>
-                          <td style="text-align: center"><?= $gjl['kode_gejala']; ?></td>
-                          <td><?= $gjl['nama_gejala']; ?></td>
-                          <td style="text-align: center;">
-                            <a href="<?= base_url('gejala/hapus/') . $gjl['id_gejala']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Data akan dihapus');">Hapus</a>
-                            <a href="" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".ubahGejala<?= $gjl['id_gejala']; ?>">Ubah</a>
-                          </td>
+                          <td style="text-align: center"><?= date('d F Y', $l['waktu']); ?></td>
+                          <td><?= $l['nama_user']; ?></td>
+                          <td><?= $l['nama_kerusakan']; ?></td>
+                          <td><?= $l['hasil_probabilitas']; ?></td>
+
                         </tr>
                         <?php $i++; ?>
                       <?php endforeach ?>

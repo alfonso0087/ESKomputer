@@ -10,6 +10,7 @@
       </div>
       <?= form_open_multipart('kerusakan/tambah'); ?>
       <div class="modal-body">
+        <input type="hidden" name="id" id="id">
 
         <div class="form-group">
           <label for="nama">Kode Kerusakan</label>
@@ -30,10 +31,11 @@
           <label for="gambar">Masukkan Gambar Hardware</label>
           <input type="file" class="form-control" id="gambar" name="gambar" placeholder="Gambar Hardware">
         </div>
+
         <div class="form-group">
           <label for="solusi">Solusi</label>
           <textarea id="solusi" class="form-control" name="solusi" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="255" data-parsley-minlength-solusi=Masukkan Solusi..." data-parsley-validation-threshold="10">
-        </textarea>
+          </textarea>
         </div>
       </div>
       <div class="modal-footer">
