@@ -25,6 +25,7 @@ class Admin extends CI_Controller
     $data['totalGejala'] = $this->Adm->CountGejala();
     $data['totalKerusakan'] = $this->Adm->CountKerusakan();
     $data['totalPengetahuan'] = $this->Adm->CountPengetahuan();
+    $data['totalLaporan'] = $this->Adm->CountLaporan();
 
     $this->load->view('templates/Admin_header', $data);
     $this->load->view('templates/Admin_sidebar', $data);

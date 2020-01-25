@@ -1,0 +1,15 @@
+Extract file
+import db
+sesuaikan dengan nama yang ada pada config->database
+letakkan pada document root
+
+Untuk yang sudah di hostingkan dapat dilihat pada
+http://esc.osnofla.tech/
+
+Admin : 
+- User : alfonso
+- Pass : alfonso
+
+Member :
+- User : member
+- Pass : member

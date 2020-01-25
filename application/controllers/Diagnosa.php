@@ -21,15 +21,15 @@ class Diagnosa extends CI_Controller
 
     // Proses Perhitungan
     $probK1 = $this->DM->ProbK1();
-    // echo 'Nilai Prob K1 =' . $probK1 . '<br>';
+    echo 'Nilai Prob K1 =' . $probK1 . '<br>';
     $probK2 = $this->DM->ProbK2();
-    // echo 'Nilai Prob K2 =' . $probK2 . '<br>';
+    echo 'Nilai Prob K2 =' . $probK2 . '<br>';
     $probK3 = $this->DM->ProbK3();
-    // echo 'Nilai Prob K3 =' . $probK3 . '<br>';
+    echo 'Nilai Prob K3 =' . $probK3 . '<br>';
     $probK4 = $this->DM->ProbK4();
-    // echo 'Nilai Prob K4 =' . $probK4 . '<br>';
+    echo 'Nilai Prob K4 =' . $probK4 . '<br>';
     $probK5 = $this->DM->ProbK5();
-    // echo 'Nilai Prob K5 =' . $probK5 . '<br><br>';
+    echo 'Nilai Prob K5 =' . $probK5 . '<br><br>';
 
     // Testing Hasil Perhitungan Bayes Tiap Kerusakan
     $data = [
@@ -53,13 +53,15 @@ class Diagnosa extends CI_Controller
     $K5 = ($probK5 / $jmlProb) . '<br>';
     echo 'Nilai Perhitungan Bayes K5 =' . $K5 . '<br>';
 
+
+
     $this->DM->hasilProbK1($K1);
     $this->DM->hasilProbK2($K2);
     $this->DM->hasilProbK3($K3);
     $this->DM->hasilProbK4($K4);
     $this->DM->hasilProbK5($K5);
 
-    // insert hasil dari diagnosa
+    //insert hasil dari diagnosa
     $this->DM->insertHasil();
     redirect('member/hasil_diagnosa');
   }

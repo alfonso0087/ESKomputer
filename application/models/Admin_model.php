@@ -41,6 +41,17 @@ class Admin_model extends CI_model
     }
   }
 
+  // Menghitung jumlah data dalam tabel Laporan
+  public function CountLaporan()
+  {
+    $query = $this->db->get('tbl_hasil_diagnosa');
+    if ($query->num_rows() > 0) {
+      return $query->num_rows();
+    } else {
+      return 0;
+    }
+  }
+
   // Mengubah data admin
   public function ubahAdmin()
   {

@@ -21,6 +21,8 @@ class Member extends CI_Controller
     $this->load->view('templates/Member_Footer');
   }
 
+  
+
   public function diagnosa()
   {
     $data['judul'] = "Daftar Gejala";

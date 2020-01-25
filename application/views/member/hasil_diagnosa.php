@@ -27,17 +27,17 @@
             <div class="row progress-circle mb-5">
               <?php foreach ($diagnosa as $diag) : ?>
                 <?php
-                                                                    if ($diag['id_kerusakan'] == 1) {
-                                                                      $diag['id_kerusakan'] = 'Rusak Pada IC Power';
-                                                                    } elseif ($diag['id_kerusakan'] == 2) {
-                                                                      $diag['id_kerusakan'] = 'Rusak Pada IC VGA';
-                                                                    } elseif ($diag['id_kerusakan'] == 3) {
-                                                                      $diag['id_kerusakan'] = 'Rusak pada Inverter/gangguan pada fleksibel kabel';
-                                                                    } elseif ($diag['id_kerusakan'] == 4) {
-                                                                      $diag['id_kerusakan'] = 'Rusak pada LCD';
-                                                                    } elseif ($diag['id_kerusakan'] == 5) {
-                                                                      $diag['id_kerusakan'] = 'Rusak pada Keyboard';
-                                                                    }
+                if ($diag['id_kerusakan'] == 1) {
+                  $diag['id_kerusakan'] = 'Rusak Pada IC Power';
+                } elseif ($diag['id_kerusakan'] == 2) {
+                  $diag['id_kerusakan'] = 'Rusak Pada IC VGA';
+                } elseif ($diag['id_kerusakan'] == 3) {
+                  $diag['id_kerusakan'] = 'Rusak pada Inverter/gangguan pada fleksibel kabel';
+                } elseif ($diag['id_kerusakan'] == 4) {
+                  $diag['id_kerusakan'] = 'Rusak pada LCD';
+                } elseif ($diag['id_kerusakan'] == 5) {
+                  $diag['id_kerusakan'] = 'Rusak pada Keyboard';
+                }
 
                 ?>
                 <div class="col-lg-4 mb-4">
@@ -68,17 +68,17 @@
               <br>
               <?php foreach ($tertinggi as $tinggi) : ?>
                 <?php
-                                                                    if ($tinggi['id_kerusakan'] == 1) {
-                                                                      $tinggi['id_kerusakan'] = 'Rusak Pada IC Power';
-                                                                    } elseif ($tinggi['id_kerusakan'] == 2) {
-                                                                      $tinggi['id_kerusakan'] = 'Rusak Pada IC VGA';
-                                                                    } elseif ($tinggi['id_kerusakan'] == 3) {
-                                                                      $tinggi['id_kerusakan'] = 'Rusak pada Inverter/gangguan pada fleksibel kabel';
-                                                                    } elseif ($tinggi['id_kerusakan'] == 4) {
-                                                                      $tinggi['id_kerusakan'] = 'Rusak pada LCD';
-                                                                    } elseif ($tinggi['id_kerusakan'] == 5) {
-                                                                      $tinggi['id_kerusakan'] = 'Rusak pada Keyboard';
-                                                                    }
+                if ($tinggi['id_kerusakan'] == 1) {
+                  $tinggi['id_kerusakan'] = 'Rusak Pada IC Power';
+                } elseif ($tinggi['id_kerusakan'] == 2) {
+                  $tinggi['id_kerusakan'] = 'Rusak Pada IC VGA';
+                } elseif ($tinggi['id_kerusakan'] == 3) {
+                  $tinggi['id_kerusakan'] = 'Rusak pada Inverter/gangguan pada fleksibel kabel';
+                } elseif ($tinggi['id_kerusakan'] == 4) {
+                  $tinggi['id_kerusakan'] = 'Rusak pada LCD';
+                } elseif ($tinggi['id_kerusakan'] == 5) {
+                  $tinggi['id_kerusakan'] = 'Rusak pada Keyboard';
+                }
 
                 ?>
                 <div class="col-md-5 animate-box">
